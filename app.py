@@ -16,6 +16,10 @@ app = Flask(__name__)
 def index():
     return(render_template("index.html"))
 
+@app.route("/singapore_joke", methods=["GET","POST"])
+def singapore_joke():
+    return(render_template("index.html"))
+
 @app.route("/ai_agent", methods=["GET","POST"])
 def ai_agent():
     return(render_template("ai_agent.html"))
