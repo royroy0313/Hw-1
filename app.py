@@ -3,7 +3,7 @@ import google.generativeai as palm
 import os
 import openai
 
-# Configure the API keys
+
 palm_api_key = "YOUR_PALM_API_KEY"
 palm.configure(api_key=palm_api_key)
 
@@ -23,7 +23,7 @@ def ai_agent():
 def ai_agent_reply():
     q = request.form.get("q")
     try:
-        # OpenAI GPT-3.5 API call
+       
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": q}],
@@ -36,7 +36,6 @@ def ai_agent_reply():
 
 @app.route("/singapore_joke", methods=["POST"])
 def singapore_joke():
-    # A common joke in Singapore
     joke = "The only thing faster than Singapore's MRT during peak hours is the way we 'chope' seats with a tissue packet."
     return render_template("joke.html", joke=joke)
 
