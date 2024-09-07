@@ -36,7 +36,7 @@ def ai_agent_reply():
 
 @app.route("/singapore_joke", methods=["POST"])
 def singapore_joke():
-    joke = "The only thing faster than Singapore's MRT during peak hours is the way we 'chope' seats with a tissue packet."
+    joke = "When there is a long queue, we love to just queue blindly without knowing what the line is for."
     return render_template("joke.html", joke=joke)
 
 @app.route("/prediction", methods=["GET", "POST"])
